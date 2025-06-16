@@ -1,0 +1,7 @@
+name = "FewBodyHamiltonians"
+uuid = "3a126c26-e5d7-4a95-83c3-3b69f8a11ded"
+authors = ["Shuhei Ohno", "Martin Mikkelsen"]
+version = "0.0.1"
+
+[compat]
+julia = "1.11"
