@@ -2,9 +2,9 @@
 CurrentModule = FewBodyHamiltonians
 ```
 
-# FewBodyHamiltonians
+# FewBodyHamiltonians.jl
 
-Documentation for [FewBodyHamiltonians](https://github.com/JuliaFewBody/FewBodyHamiltonians.jl).
+Documentation for [FewBodyHamiltonians.jl](https://github.com/JuliaFewBody/FewBodyHamiltonians.jl).
 
 ```@index
 ```
