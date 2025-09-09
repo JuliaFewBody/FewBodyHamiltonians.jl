@@ -1,5 +1,9 @@
 module FewBodyHamiltonians
 
-# Write your package code here.
+# Operators
+include("./Operators.jl")
+
+# Coordinates
+include("./Coordinates.jl")
 
 end
