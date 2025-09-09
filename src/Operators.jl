@@ -75,146 +75,20 @@ H = Hamiltonian(
 """ Hamiltonian
 
 @doc raw"""
-`Laplacian(coefficient=1)`
+`Kinetic(n::Int, ℏ::Real, m::Real)`
 ```math
-+ a\nabla^2
+-\frac{\hbar^2}{2m} \nabla^2_{n}
+```
+""" Kinetic
+
+@doc raw"""
+`Coulomb(i::Int, j::Int, coefficient::Real)`
+```math
++ \frac{a}{r_{ij}}
 ```
 | Arguments | Symbol |
 | :-- | :-- |
+| `i` | ``i`` |
+| `j` | ``j`` |
 | `coefficient` | ``a`` |
-""" Laplacian
-
-@doc raw"""
-`NonRelativisticKinetic(ℏ=1, m=1)`
-```math
--\frac{\hbar^2}{2m} \nabla^2
-```
-""" NonRelativisticKinetic
-
-@doc raw"""
-`RestEnergy(c=1, m=1)`
-```math
-m c^2
-```
-Use `c = 137.035999177` (from [2022 CODATA](https://physics.nist.gov/cgi-bin/cuu/Value?alphinv)) in the atomic units.
-""" RestEnergy
-
-@doc raw"""
-`RelativisticCorrection(c=1, m=1, n=2)`
-The p^{2n} term of the Taylor expansion:
-```math
-\begin{aligned}
-  \sqrt{p^2 c^2 + m^2 c^4}
-  =& m \times c^2 \\
-  &+ 1 / 2   / m         \times p^2 (n=1) \\
-  &- 1 / 8   / m^3 / c^2 \times p^4 (n=2) \\
-  &+ 1 / 16  / m^5 / c^4 \times p^6 (n=3) \\
-  &- 5 / 128 / m^7 / c^6 \times p^8 (n=4) \\
-  &+ \cdots
-\end{aligned}
-```
-Use `c = 137.035999177` (from [2022 CODATA](https://physics.nist.gov/cgi-bin/cuu/Value?alphinv)) in the atomic units.
-""" RelativisticCorrection
-
-@doc raw"""
-`RelativisticKinetic(c=1, m=1)`
-```math
-\sqrt{p^2 c^2 + m^2 c^4} - m c^2
-```
-Use `c = 137.035999177` (from [2022 CODATA](https://physics.nist.gov/cgi-bin/cuu/Value?alphinv)) in the atomic units.
-""" RelativisticKinetic
-
-@doc raw"""
-`ConstantPotential(constant=1)`
-```math
-+ c
-```
-| Arguments | Symbol |
-| :-- | :-- |
-| `constant` | ``c`` |
-""" ConstantPotential
-
-@doc raw"""
-`LinearPotential(coefficient=1)`
-```math
-+ ar
-```
-| Arguments | Symbol |
-| :-- | :-- |
-| `coefficient` | ``a`` |
-""" LinearPotential
-
-@doc raw"""
-`CoulombPotential(coefficient=1)`
-```math
-+ \frac{a}{r}
-```
-| Arguments | Symbol |
-| :-- | :-- |
-| `coefficient` | ``a`` |
-""" CoulombPotential
-
-@doc raw"""
-`PowerLawPotential(coefficient=1, exponent=1)`
-```math
-+ ar^n
-```
-| Arguments | Symbol |
-| :-- | :-- |
-| `coefficient` | ``a`` |
-| `exponent` | ``n`` |
-""" PowerLawPotential
-
-@doc raw"""
-`GaussianPotential(coefficient=1, exponent=1)`
-```math
-+ a \exp(- b r^2)
-```
-| Arguments | Symbol |
-| :-- | :-- |
-| `coefficient` | ``a`` |
-| `exponent`    | ``b`` |
-""" GaussianPotential
-
-@doc raw"""
-`ExponentialPotential(coefficient=1, exponent=1)`
-```math
-+ a \exp(- b r)
-```
-| Arguments | Symbol |
-| :-- | :-- |
-| `coefficient` | ``a`` |
-| `exponent`    | ``b`` |
-""" ExponentialPotential
-
-@doc raw"""
-`YukawaPotential(coefficient=1, exponent=1)`
-```math
-+ \frac{a}{r} \exp(- b r)
-```
-| Arguments | Symbol |
-| :-- | :-- |
-| `coefficient` | ``a`` |
-| `exponent`    | ``b`` |
-""" YukawaPotential
-
-@doc raw"""
-`DeltaPotential(coefficient=1)`
-```math
-+ a δ(r)
-```
-| Arguments | Symbol |
-| :-- | :-- |
-| `coefficient` | ``a`` |
-""" DeltaPotential
-
-@doc raw"""
-`FunctionPotential(f)`
-```math
-+ f(r)
-```
-""" FunctionPotential
-
-@doc raw"""
-`UniformGridPotential(R, V)`
-""" UniformGridPotential
+""" Coulomb
