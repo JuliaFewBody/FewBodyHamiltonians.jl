@@ -24,6 +24,9 @@ assumes atomic units, while explicit pair coefficients support other conventions
 
 ## Solver integration
 
+Use consumer releases that depend on FewBodyHamiltonians 0.1. Earlier consumer
+releases may still define their own construction types.
+
 ```julia
 import FewBodyECG
 result = FewBodyECG.solve(H, FewBodyECG.SVM(40))

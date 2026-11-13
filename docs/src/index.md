@@ -31,6 +31,9 @@ coefficients in those units.
 
 ## Backend capabilities
 
+These integrations require consumer versions depending on FewBodyHamiltonians
+0.1; earlier releases may still define separate construction types.
+
 | Backend | Shared terms supported |
 | --- | --- |
 | FewBodyECG | All construction terms; spin terms require its spin-dependent matrix layer |
